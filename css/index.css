@@ -1,0 +1,98 @@
+/* Bloque principal del objeto */
+header h1 {
+  font-family: var(--mono);
+  font-size: 2rem; /* un poco más grande */
+  color: var(--accent);
+  text-align: center;
+  letter-spacing: 1px;
+
+  /* Efecto ANSI Shadow */
+  text-shadow: 
+    2px 2px 0 #1e2030,  /* sombra principal */
+    4px 4px 0 rgba(101,188,255,0.4), /* sombra azul clara */
+    6px 6px 0 rgba(101,188,255,0.25); /* glow más difuso */
+}
+.pr-object {
+  width: 100%;
+  max-width: 900px; /* Más ancho para que quepa todo bien */
+  margin: 2rem auto;
+  padding: 2rem; /* Mucho aire alrededor */
+  
+  /* Estilo Cristal / Moderno */
+  background: var(--bg-code);
+  backdrop-filter: blur(10px); /* Efecto borroso detrás */
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--border-code);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-strong);
+  
+  /* Tipografía base del código */
+  font-family: var(--mono);
+  font-size: 1.3rem; /* ¡Letra GRANDE! */
+  line-height: 1.8;
+  overflow-x: auto; /* Scroll si es muy pequeño el dispositivo */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pr-object:hover {
+  transform: translateY(-5px); /* Pequeña elevación al pasar el mouse */
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* IMAGEN DE PERFIL (La clave del cambio) */
+.profile-inline {
+  width: 150px;  /* Mucho más grande (antes 50px) */
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%; /* Círculo perfecto */
+  
+  /* Posicionamiento para que no rompa el texto */
+  vertical-align: middle;
+  margin: 30px 15px;
+  
+  /* Estética */
+  border: 3px solid var(--accent-color);
+  box-shadow: 0 0 15px rgba(97, 218, 251, 0.4); /* Resplandor azul */
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+}
+
+.profile-inline:hover {
+  transform: scale(1.2) rotate(5deg); /* Efecto lupa grande al pasar el mouse */
+  z-index: 10;
+  box-shadow: 0 0 25px rgba(97, 218, 251, 0.8);
+}
+
+@media (max-width: 1024px) {
+  .pr-object { 
+    padding: 2rem; 
+    font-size: 1.1rem; 
+  }
+}
+
+@media (max-width: 768px) {
+  .pr-object { 
+    padding: 1.5rem; 
+    font-size: 1rem; 
+    width: 95%;
+  }
+  
+  /* En móviles la imagen no debe ser gigante para no romper la línea */
+  .profile-inline { 
+    width: 70px; 
+    height: 70px; 
+  }
+}
+
+@media (max-width: 480px) {
+  .pr-object {
+    padding: 1rem;
+    font-size: 0.9rem; /* Un poco más pequeño para que quepa el código */
+  }
+  
+  .profile-inline {
+    width: 60px;
+    height: 60px;
+  }
+}

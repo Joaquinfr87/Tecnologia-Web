@@ -1,0 +1,76 @@
+/* layout.css - Estructura mejorada */
+
+/* Contenedor principal */
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2rem;
+  background: var(--surface);
+  border-radius: calc(var(--radius) + 4px);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.45);
+  border: 1px solid rgba(255,255,255,0.05);
+  font-size: 18px; /* Aumenta tamaño de texto */
+  line-height: 1.7;
+  transition: all 0.3s ease;
+}
+
+/* Header */
+header {
+  text-align: center;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+header h1 {
+  font-family: var(--mono);
+  color: var(--accent);
+  font-size: 2rem; /* más grande */
+  letter-spacing: 0.7px;
+}
+
+/* Footer */
+footer {
+  max-width: var(--max-width);
+  margin: 2rem auto 0;
+  padding: 1rem 1rem;
+  color: var(--muted);
+  font-size: 1rem; /* más grande */
+  display: flex;
+  justify-content: space-between;
+  gap: .5rem;
+  align-items: center;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  flex-wrap: wrap;
+}
+
+/* Bloque de código general */
+.pr-object {
+  max-width: 750px;
+  margin: 2.5rem auto;
+  padding: 2rem;
+  font-family: var(--mono);
+  overflow-x: auto;
+  background: rgba(255,255,255,0.03);
+  border-radius: var(--radius);
+  border: 1px solid rgba(255,255,255,0.06);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  main { padding: 1.8rem; font-size: 17px; }
+  header h1 { font-size: 1.8rem; }
+  footer { font-size: 0.95rem; }
+}
+
+@media (max-width: 720px) {
+  main { padding: 1.2rem; font-size: 16px; }
+  header h1 { font-size: 1.6rem; }
+  footer { flex-direction: column; align-items: flex-start; gap: .3rem; font-size: 0.9rem; }
+}
+
+@media (max-width: 480px) {
+  main { padding: 1rem; font-size: 15px; }
+  header h1 { font-size: 1.4rem; }
+  footer { font-size: 0.85rem; }
+}
+

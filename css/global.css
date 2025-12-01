@@ -1,0 +1,66 @@
+/* global.css - Tema Tokyo Night Moon */
+
+/* 1) Reset básico */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 2) Variables de tema */
+:root {
+  --bg: #222436;        /* fondo */
+  --surface: #1e2030;   /* paneles */
+  --text: #c8d3f5;      /* texto principal */
+  --muted: #7a88cf;     /* texto secundario */
+  --accent: #65bcff;    /* azul */
+  --accent-2: #ff9e64;  /* naranja */
+  --string: #c3e88d;    /* verde */
+  --purple: #fca7ea;    /* rosado */
+  
+  --radius: 10px;
+  --max-width: 1000px;
+  --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Fira Code", monospace;
+  --ui-sans: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+/* 3) Base del documento */
+html, body {
+  height: 100%;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--ui-sans);
+  line-height: 1.6;
+  font-size: 16px;
+  padding: 2rem;
+}
+
+/* 4) Enlaces */
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: 0.18s ease;
+}
+
+a:hover {
+  color: var(--purple);
+}
+
+/* 5) Accesibilidad */
+:focus {
+  outline: 3px solid rgba(101,188,255,0.35);
+  outline-offset: 2px;
+}
+
+/* 6) Utilidades */
+.text-center { text-align: center; }
+.mt-1 { margin-top: .5rem; }
+.mb-1 { margin-bottom: .5rem; }
+.p-1 { padding: .5rem; }
+
+/* 7) Responsive base */
+@media (max-width: 720px) {
+  body { padding: 1rem; }
+}
