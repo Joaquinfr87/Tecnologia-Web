@@ -42,19 +42,6 @@ footer {
   flex-wrap: wrap;
 }
 
-/* Bloque de código general */
-.pr-object {
-  max-width: 750px;
-  margin: 2.5rem auto;
-  padding: 2rem;
-  font-family: var(--mono);
-  overflow-x: auto;
-  background: rgba(255,255,255,0.03);
-  border-radius: var(--radius);
-  border: 1px solid rgba(255,255,255,0.06);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-}
-
 /* Responsive */
 @media (max-width: 1024px) {
   main { padding: 1.8rem; font-size: 17px; }

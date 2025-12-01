@@ -15,9 +15,8 @@ header h1 {
 .pr-object {
   width: 100%;
   max-width: 900px; /* Más ancho para que quepa todo bien */
-  margin: 2rem auto;
+  margin: 1rem auto;
   padding: 2rem; /* Mucho aire alrededor */
-  
   /* Estilo Cristal / Moderno */
   background: var(--bg-code);
   backdrop-filter: blur(10px); /* Efecto borroso detrás */
