@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Problema NP vs P</title>
+    <link href="p-np.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+        <h1>El Problema P vs NP</h1>
+        <h2>La pregunta más importante en informática</h2>
+    </header>
+
+    <main>
+        <section>
+            <h3>¿Qué es?</h3>
+            <p>Problema fundamental sin resolver: <strong>¿Son iguales P y NP?</strong></p>
+            <p>Premio: 1 millón de dólares (Problema del Milenio)</p>
+        </section>
+
+        <section>
+            <h3>Definiciones Clave</h3>
+            <table border="1">
+                <tr>
+                    <th>Clase</th>
+                    <th>Significado</th>
+                    <th>Ejemplos</th>
+                </tr>
+                <tr>
+                    <td><strong>P</strong></td>
+                    <td>Problemas <em>fáciles de resolver</em></td>
+                    <td>Ordenar números, buscar en lista</td>
+                </tr>
+                <tr>
+                    <td><strong>NP</strong></td>
+                    <td>Problemas <em>fáciles de verificar</em></td>
+                    <td>Sudoku, rutas de viaje, criptografía</td>
+                </tr>
+            </table>
+            <p><strong>Relación:</strong> P ⊆ NP (todos los problemas de P están en NP)</p>
+        </section>
+
+        <section>
+            <h3>La Gran Pregunta: ¿P = NP?</h3>
+            <div>
+                <h4>Si SÍ (improbable):</h4>
+                <ul>
+                    <li>Todo lo fácil de verificar sería fácil de resolver</li>
+                    <li>Revolución en computación</li>
+                    <li>Problemas: criptografía actual se rompería</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Si NO (consenso actual):</h4>
+                <ul>
+                    <li>Hay problemas inherentemente difíciles</li>
+                    <li>Límites fundamentales de la computación</li>
+                    <li>La criptografía sigue siendo segura</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h3>NP-Completos</h3>
+            <ul>
+                <li>Problemas más difíciles dentro de NP</li>
+                <li><strong>Propiedad clave:</strong> Si UNO tiene solución rápida, TODOS la tienen</li>
+                <li>Ejemplos: SAT, problema del viajante, problema de la mochila</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Implicaciones Prácticas</h3>
+            <table border="1">
+                <tr>
+                    <th>Área</th>
+                    <th>Si P = NP</th>
+                    <th>Si P ≠ NP</th>
+                </tr>
+                <tr>
+                    <td>Criptografía</td>
+                    <td>❌ Sistemas actuales inseguros</td>
+                    <td>✅ Fundamentos teóricos seguros</td>
+                </tr>
+                <tr>
+                    <td>Optimización</td>
+                    <td>✅ Soluciones perfectas rápidas</td>
+                    <td>❌ Necesidad de aproximaciones</td>
+                </tr>
+                <tr>
+                    <td>Investigación</td>
+                    <td>✅ Revolución científica</td>
+                    <td>✅ Límites bien definidos</td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <h3>Estado Actual</h3>
+            <ul>
+                <li><strong>Abierto desde:</strong> 1971 (Stephen Cook)</li>
+                <li><strong>Consenso científico:</strong> P ≠ NP</li>
+                <li><strong>Prueba:</strong> No existe (aún)</li>
+                <li><strong>Dificultad:</strong> Problema muy profundo, relacionado con matemáticas fundamentales</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Analogía: El Sudoku</h3>
+            <p><strong>Verificar solución:</strong> Fácil y rápido (tiempo polinómico)</p>
+            <p><strong>Encontrar solución:</strong> Difícil y lento (posiblemente tiempo exponencial)</p>
+            <p><strong>Si P = NP:</strong> Habría un método rápido para resolver cualquier Sudoku</p>
+        </section>
+    </main>
+
+    <footer>
+        <hr>
+        <p><strong>Resumen:</strong> P vs NP pregunta si "verificar" es fundamentalmente más fácil que "resolver".</p>
+        <p>© Explicación HTML del problema P vs NP</p>
+    </footer>
+</body>
+</html>
