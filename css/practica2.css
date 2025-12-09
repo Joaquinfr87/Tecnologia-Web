@@ -1,0 +1,144 @@
+/* ===============================
+   TOKYONIGHT MOON - LazyVim Style
+   =============================== */
+
+/* 1. RESET Y CONFIGURACIÓN BASE (Corrección importante) */
+* {
+  box-sizing: border-box; /* Manejo correcto de tamaños */
+  margin: 0;
+  padding: 0;
+}
+p {
+  color: #a9b1d6;         /* Texto secundario (más suave que el blanco puro) */
+  line-height: 1.8;       /* Altura extra necesaria para fuentes monoespaciadas */
+  margin-bottom: 1.5rem;  /* Espacio generoso entre párrafos */
+  font-size: 1.25rem;
+  max-width: 65ch;        /* REGLA DE ORO: Limita el ancho a ~65 caracteres */
+  letter-spacing: 0.01em; /* Ligero espaciado para "airear" las letras */
+}
+
+/* Opcional: Si quieres resaltar la primera línea de un párrafo importante */
+p.intro {
+  color: #c0caf5;         /* Texto más brillante */
+  font-size: 1.1rem;
+  border-left: 3px solid #7aa2f7; /* Borde azul a la izquierda */
+  padding-left: 1rem;
+}
+
+/* Opcional: Selección de texto bonita (funciona en p y otros elementos) */
+::selection {
+  background: #515c7e;    /* Fondo de selección gris-azulado */
+  color: #ffffff;
+}
+
+body {
+  background-color: #1a1b26; /* Fondo general para que coincida con el tema */
+  color: #c0caf5;            /* Color de texto base */
+  font-family: 'Fira Code', monospace;
+  padding: 20px;             /* Espacio alrededor del contenido en lugar de margin global */
+  line-height: 1.5;
+}
+
+/* ===============================
+   INPUTS
+   =============================== */
+input {
+  background-color: #16161e; /* Un poco más oscuro que el fondo del body para contraste */
+  color: #c0caf5;
+  border: 1px solid #414868;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  font-family: inherit;      /* Hereda la fuente del body */
+  font-size: 0.95rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  width: 100%;               /* Opcional: para que se adapten al contenedor */
+  max-width: 300px;          /* Opcional: para que no sean gigantes */
+  display: block;            /* Mejora el comportamiento con labels */
+  margin-bottom: 1rem;       /* Espacio debajo del input */
+}
+
+input:focus {
+  outline: none;
+  border-color: #7aa2f7;     /* Azul Tokyo */
+  box-shadow: 0 0 0 2px rgba(122, 162, 247, 0.2); /* Glow suave en lugar de shadow dura */
+}
+
+input::placeholder {
+  color: #565f89;
+  font-style: italic;
+  opacity: 0.7;
+}
+
+/* ===============================
+   LABELS
+   =============================== */
+label {
+  color: #7aa2f7;            /* Azul Tokyo */
+  font-weight: 700;          /* Un poco más grueso para legibilidad */
+  font-size: 0.85rem;
+  margin-bottom: 0.4rem;
+  display: block;            /* Para que quede encima del input */
+  text-transform: uppercase; /* Estilo muy "Vim statusline" */
+  letter-spacing: 0.05em;
+}
+
+/* ===============================
+   BUTTONS
+   =============================== */
+button {
+  background-color: #7aa2f7;
+  color: #15161e;            /* Texto muy oscuro para buen contraste */
+  border: none;
+  border-radius: 6px;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.95rem;
+  font-family: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 10px;
+
+}
+
+button:hover {
+  background-color: #bb9af7; /* Cambio a Púrpura Tokyo para hover */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+button:active {
+  background-color: #3d59a1; /* Azul oscuro */
+  color: #c0caf5;            /* CORRECCIÓN: Texto claro al presionar para que se lea */
+  transform: translateY(0px);
+  box-shadow: none;
+}
+
+/* ===============================
+   OL y LI
+   =============================== */
+ul {
+  list-style: decimal;
+  padding-left: 1.5rem;
+  margin: 1.5rem 0;
+  color: #9aa5ce;            /* Un tono ligeramente diferente al texto base */
+}
+
+ul li {
+  margin-bottom: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+/* Estilo del número */
+ul li::marker {
+  color: #7aa2f7;
+  font-weight: bold;
+  font-family: 'Fira Code', monospace; 
+}
+
+ul li:hover {
+  color: #c0caf5;            /* Se ilumina al pasar el mouse */
+}
+
+ul li:hover::marker {
+  color: #bb9af7;            /* El número cambia a púrpura */
+}
