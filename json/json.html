@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Índice - Práctica 2</title>
+    <style>
+        /* ===============================
+           TOKYONIGHT MOON - BASE
+           =============================== */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #1a1b26; /* Fondo oscuro */
+            color: #c0caf5;            /* Texto base */
+            font-family: 'Fira Code', monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;         /* Centrado vertical */
+        }
+
+        /* Contenedor del menú */
+        .menu-container {
+            width: 100%;
+            max-width: 500px;
+            padding: 2rem;
+        }
+
+        h1 {
+            color: #7aa2f7;
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-bottom: 2px solid #414868;
+            padding-bottom: 1rem;
+        }
+
+        /* ===============================
+           LISTA DE ENLACES
+           =============================== */
+        ul {
+            list-style: none;
+        }
+
+        li {
+            margin-bottom: 1rem;
+        }
+
+        /* Estilo de los links (tarjetas) */
+        a {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #16161e;
+            color: #c0caf5;
+            text-decoration: none;
+            padding: 1rem 1.5rem;
+            border: 1px solid #414868;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+            font-weight: 500;
+        }
+
+        /* Icono simulado con CSS ::before */
+        a::before {
+            content: "Lua"; /* O JS, o un icono */
+            content: "📄";  /* Emoji como icono de archivo */
+            margin-right: 10px;
+            filter: grayscale(1);
+            transition: filter 0.2s;
+        }
+
+        /* Efectos Hover */
+        a:hover {
+            border-color: #7aa2f7;       /* Borde azul */
+            background-color: #1f2335;   /* Fondo ligeramente más claro */
+            transform: translateX(5px);  /* Pequeño desplazamiento a la derecha */
+            color: #7aa2f7;              /* Texto azul */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        a:hover::before {
+            filter: grayscale(0);        /* Icono a color */
+        }
+
+        /* Flechita al final */
+        a::after {
+            content: "→";
+            opacity: 0;
+            transform: translateX(-10px);
+            transition: all 0.2s;
+            color: #bb9af7;
+        }
+
+        a:hover::after {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="menu-container">
+        <h1>📂 JSON</h1>
+        <ul>
+            <li>
+                <a href="superheroes/heroes.html">Ejercicio 01</a>
+            </li>
+            <li>
+                <a href="turismo/turismo.html">Ejercicio 02</a>
+            </li>
+        </ul>
+    </div>
+
+</body>
+</html>
